@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+function validate(){
+var pw1= document.getElementById("pass").value;
+var pw2= document.getElementById("cpass").value;
+if(pw1!==pw2)
+{
+alert("password and confirm password must be same");
+return false;
+}
+return true;
+
+}    
+</script>
+
 </head>
 <body>
 <h1>Registration</h1>
@@ -23,7 +37,7 @@
 <label for="phone">Mobile No.</label><br>
 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
 
-<input type="submit" id="submitDetails"
+<input type="submit" onclick="return validate()" id="submitDetails"
 name="submitDetails" value="submit">
 
 </form>
