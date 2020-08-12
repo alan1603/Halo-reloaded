@@ -1,0 +1,43 @@
+<h1>Registration</h1>
+<%- include('./partials/messages'); %>
+<form action="/users/register" method="POST">
+<label for="name">Orphanage name:</label><br>
+<input type="name"
+id="name"
+name="name"
+placeholder="Enter Name"
+value="<%= typeof name != 'undefined' ? name : '' %>"><br><br><br>
+
+<label for="password">Password:</label><br>
+<input type="password"
+id="password"
+name="password"
+placeholder="Create Password"
+value="<%= typeof password != 'undefined' ? password : '' %>"><br><br><br>
+
+<label for="password2">Confirm Password:</label><br>
+<input type="password"
+id="password2"
+name="password2"
+placeholder="Confirm Password"
+value="<%= typeof password2 != 'undefined' ? password2 : '' %>"><br><br><br>
+
+<label for="address">Address:</label><br>
+<textarea id="address" name="address" rows="5" cols="30" placeholder="Enter Address" value="<%= typeof address != 'undefined' ? address : '' %>"></textarea><br><br><br>
+
+<label for="email">E-mail:</label><br>
+<input type="email"
+id="email"
+name="email"
+placeholder="Enter Email"
+value="<%= typeof email != 'undefined' ? email : '' %>"><br><br><br>
+
+<label for="phone">Mobile No.</label><br>
+<input type="tel" id="phone" name="phone" placeholder="Enter Mobile no." pattern="[0-9]{10}" required value="<%= typeof phone != 'undefined' ? phone : '' %>"><br><br>
+
+<button type="submit" class="btn btn-primary btn-block">
+  Register
+</button>
+<p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+
+</form>
